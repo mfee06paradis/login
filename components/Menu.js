@@ -309,8 +309,9 @@ function Menu(props) {
                       return false
                     }
                   })
-                  //console.log(getUser)
-                  localStorage.setItem('Member', JSON.stringify(getUser))
+                  if (getUser !== undefined) {
+                    localStorage.setItem('Member', JSON.stringify(getUser))
+                  }
                   const isMember = userData.some((value) => {
                     if (
                       userEmail === value.MemberEmail &&
