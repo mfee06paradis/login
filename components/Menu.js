@@ -45,7 +45,7 @@ function Menu(props) {
   const isAuthTrueMenu = () => {
     const userNameLogin = localStorage.getItem('Member') || []
     const parseuserNameLogin = JSON.parse(userNameLogin)
-    const nameParseuserNameLogin = parseuserNameLogin.MemberName
+    const nameParseuserNameLogin = parseuserNameLogin.memberName
     const sliceNameParseuserNameLogin = nameParseuserNameLogin.slice(1)
     return (
       <>
@@ -301,8 +301,8 @@ function Menu(props) {
                 onClick={(e) => {
                   const getUser = userData.find((value) => {
                     if (
-                      userEmail === value.MemberEmail &&
-                      userPassword === value.MemberPW
+                      userEmail === value.memberEmail &&
+                      userPassword === value.memberPw
                     ) {
                       return true
                     } else {
@@ -314,8 +314,8 @@ function Menu(props) {
                   }
                   const isMember = userData.some((value) => {
                     if (
-                      userEmail === value.MemberEmail &&
-                      userPassword === value.MemberPW
+                      userEmail === value.memberEmail &&
+                      userPassword === value.memberPw
                     ) {
                       return true
                     } else {
